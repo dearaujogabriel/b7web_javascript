@@ -75,4 +75,5 @@ let metragem = 123
 let quartos = 2
 console.log(`A casa custa R$ ${calcularImovel(metragem, quartos)}`)
 
+console.log("Olá")
 
