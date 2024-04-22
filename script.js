@@ -1,16 +1,6 @@
-// function square(x) {
-//     return x * x
-// }
+let colors = ['red', 'blue', 'yellow', 'green', 1, 2]
 
-// function addSquares(a, b) {
-//     return square(a) + square(b)
-// }
+console.log(colors[2])
 
-function addSquares(a, b) {
-    const square = (x) => x * x
-    return square(a) + square(b)
-}
-
-
-console.log(addSquares(2, 3))
-
+let lista = ['oi', ['xx', 'ddd',['vasco']]]
+console.log(lista[1][2][0])
