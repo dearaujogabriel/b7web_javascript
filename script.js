@@ -1,6 +1,19 @@
-let colors = ['red', 'blue', 'yellow', 'green', 1, 2]
+let ingredientes = [
+    'leite',
+    'ovo', 
+    'farinha', 
+    'fermento',
+    'acucar'
+]
 
-console.log(colors[2])
+// adicionar novo item ao array
+ingredientes.push('cacau em po')
 
-let lista = ['oi', ['xx', 'ddd',['vasco']]]
-console.log(lista[1][2][0])
+// remove o ultimo item do array
+ingredientes.pop()
+
+// remove o primeiro item do array
+ingredientes.shift()
+
+console.log(`Total de ingredientes: ${ingredientes.length}`)
+console.log(ingredientes)
