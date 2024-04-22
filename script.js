@@ -1,19 +1,19 @@
-let ingredientes = [
-    'leite',
-    'ovo', 
-    'farinha', 
-    'fermento',
-    'acucar'
-]
+// Exibir a Ferrari
+let carros = ['BMW', 'Ferrari', 'Mercedes']
+let x = 1
+console.log('1 . ' + carros[x])
 
-// adicionar novo item ao array
-ingredientes.push('cacau em po')
+// substituir a Ferrari por Audi
+console.log('2 . Lista com Audi')
+carros[x] = 'Audi'
+console.log(carros)
 
-// remove o ultimo item do array
-ingredientes.pop()
+// Adicionar volvo a lista
+console.log('3. Lista com Volvo')
+carros.push('Volvo')
+console.log(carros)
 
-// remove o primeiro item do array
-ingredientes.shift()
+// Quantidade de itens na lista
+console.log('4. Quantos itens tem no array')
+console.log(carros.length)
 
-console.log(`Total de ingredientes: ${ingredientes.length}`)
-console.log(ingredientes)
