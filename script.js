@@ -1,20 +1,24 @@
-
-function validar(usuario, senha) {
-    if(usuario === "gabriel" && senha === "123") {
-        return true
-    } else {
-        return false
+/* 
+    function somar(x, y) {
+        return x + y
     }
+*/
+
+const somar = (x, y) => {
+    return x + y
 }
 
-let usuario = "gabriel"
-let senha = "123"
+const somarz = (x, y) => x + y
 
-let validacao = validar(usuario, senha)
-if (validacao) {
-    console.log("Access allowed!")
-} else {
-    console.log("Access denied!")
+console.log(somar(15, 5))
+console.log(somarz(5, 5))
+
+
+function sobrenome(lastname) {
+    return "Gabriel " + lastname
 }
 
+sobrenomez = sob => "Gabriel " + sob
 
+console.log(sobrenome("Araujo"))
+console.log(sobrenomez("Araujo"))
