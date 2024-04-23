@@ -1,19 +1,15 @@
-// Exibir a Ferrari
-let carros = ['BMW', 'Ferrari', 'Mercedes']
-let x = 1
-console.log('1 . ' + carros[x])
+let personagem = {
+    nome: 'Gabriel',
+    idade: 26,
+    pais: 'Brasil',
+    sexo: 'Masculino',
+    caracteristicas: {
+        forca: 100,
+        magia: 100,
+        classe: 'Nobre'
+    },
+    olhos: ['Azul', 'Vermelho']
+}
 
-// substituir a Ferrari por Audi
-console.log('2 . Lista com Audi')
-carros[x] = 'Audi'
-console.log(carros)
-
-// Adicionar volvo a lista
-console.log('3. Lista com Volvo')
-carros.push('Volvo')
-console.log(carros)
-
-// Quantidade de itens na lista
-console.log('4. Quantos itens tem no array')
-console.log(carros.length)
-
+console.log(`${personagem.nome} tem ${personagem.idade} anos e mora no ${personagem.pais}. Tem ${personagem.caracteristicas.forca} pontos de forca, ${personagem.caracteristicas.magia} pontos de magia e sua classe eh ${personagem.caracteristicas.classe}`)
+console.log(`Seu olho esquerdo eh ${personagem.olhos[0]} e seu olho direito eh ${personagem.olhos[1]}`)
