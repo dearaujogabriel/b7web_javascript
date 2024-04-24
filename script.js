@@ -1,22 +1,29 @@
-let pessoa = {
-    nome: 'Gabriel',
-    sobrenome: 'Araujo', 
-    idade: 26,
-    nomeCompleto: function () {
-        return this.nome + ' ' + this.sobrenome
-    }
+let cores = ['verde', 'vermelho', 'azul', 'rosa', 'preto', 'branco', 'lilas']
+
+let colors = [
+    {nome: 'preto', qtd: 10 },
+    {nome: 'branco', qtd: 5 },
+    {nome: 'azul', qtd: 4 }
+]
+// for(let i = 0; i <= cores.length; i++) {
+//     console.log(cores[i])
+// }
+
+// for(let cor in cores){
+//     console.log(cores[cor])
+// }
+
+for(let cor of cores){
+    console.log(cor)
 }
 
-console.log(pessoa.nomeCompleto())
-
-// em funcoes anonimas nao funciona pois uma funcao sem pai nao pode acessar os atributos do proprio objeto
-let pessoas = {
-    nome: 'Gabriel',
-    sobrenome: 'Araujo', 
-    idade: 26,
-    nomeCompleto: () => {
-        return this.nome + ' ' + this.sobrenome
-    }
+for (let cor of colors) {
+    console.log(`${cor.nome} ${cor.qtd}`)
 }
 
-console.log(pessoas.nomeCompleto())
+for (let i in colors){
+    colors[i].nome = cores[i].toUpperCase()
+    console.log(colors[i])
+}
+
+console.log(colors)
