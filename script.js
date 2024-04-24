@@ -1,29 +1,10 @@
-let cores = ['verde', 'vermelho', 'azul', 'rosa', 'preto', 'branco', 'lilas']
+let numero = 0
 
-let colors = [
-    {nome: 'preto', qtd: 10 },
-    {nome: 'branco', qtd: 5 },
-    {nome: 'azul', qtd: 4 }
-]
-// for(let i = 0; i <= cores.length; i++) {
-//     console.log(cores[i])
-// }
-
-// for(let cor in cores){
-//     console.log(cores[cor])
-// }
-
-for(let cor of cores){
-    console.log(cor)
+while(numero < 10){
+    console.log('While ' + numero)
+    numero++
 }
 
-for (let cor of colors) {
-    console.log(`${cor.nome} ${cor.qtd}`)
+for(let numero = 0; numero < 10; numero++) {
+    console.log('For ' + numero)
 }
-
-for (let i in colors){
-    colors[i].nome = cores[i].toUpperCase()
-    console.log(colors[i])
-}
-
-console.log(colors)
