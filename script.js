@@ -1,26 +1,34 @@
-let fruits = ['Maca', 'Uva', 'Laranja', 'Banana']
+// let fruits = ['Ameixa', 'Maca', 'Uva', 'Laranja', 'Banana']
+// console.log(fruits)
+
+// fruits.sort() // faz a ordenacao alfabetica do array
+// console.log(fruits)
+
+// fruits.reverse() // inverte a ordem do array
+// console.log(fruits)
 
 
-fruits.push('Kiwi') // adiciona no final da fila
-console.log(fruits)
-fruits.pop() // remove o ultimo do array
-console.log(fruits)
-fruits.shift() // remoce o primeiro item do array
-console.log(fruits)
+let cars = [
+    {brand: 'Fiat', year: 2022},
+    {brand: 'Ferrari', year: 2020},
+    {brand: 'BMW', year: 2023},
+    {brand: 'Lamborghini', year: 2000}
+]
+console.log(cars)
 
-console.log(fruits.length)
+cars.sort((a, b) => {
+    console.log( a.year - b.year)
+    return a.year - b.year
+})
 
-let test = fruits.join('; ') // agrupa os itens do array em uma string
-console.log(test)
+cars.sort((a, b) => {
+    if(a.year > b.year){
+        return 1
+    } else if(a.year < b.year){
+        return -1
+    } else {
+        return 0
+    }
+})
 
-fruits[1] = 'Pera' // define o valor de um item do array especificado pelo index
-console.log(fruits)
-
-
-fruits[fruits.length - 1] = 'Limao' // define o valor de um item do array especificado pelo index
-console.log(fruits)
-
-fruits.pop() // remove o ultimo item
-fruits.push('Limao') // adiciona no final do array
-console.log(fruits)
-
+console.log(cars)
