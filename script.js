@@ -1,34 +1,39 @@
-// let fruits = ['Ameixa', 'Maca', 'Uva', 'Laranja', 'Banana']
-// console.log(fruits)
+let fruits = ['Ameixa', 'Maca', 'Laranja', 'Banana', 'Uva']
 
-// fruits.sort() // faz a ordenacao alfabetica do array
-// console.log(fruits)
-
-// fruits.reverse() // inverte a ordem do array
-// console.log(fruits)
-
-
-let cars = [
-    {brand: 'Fiat', year: 2022},
-    {brand: 'Ferrari', year: 2020},
-    {brand: 'BMW', year: 2023},
-    {brand: 'Lamborghini', year: 2000}
-]
-console.log(cars)
-
-cars.sort((a, b) => {
-    console.log( a.year - b.year)
-    return a.year - b.year
-})
-
-cars.sort((a, b) => {
-    if(a.year > b.year){
-        return 1
-    } else if(a.year < b.year){
-        return -1
+let bigFruits = fruits.filter((item) => {
+    if (item.length > 4) {
+        return true
     } else {
-        return 0
+        return false
     }
 })
 
-console.log(cars)
+console.log(bigFruits)
+console.log(fruits)
+
+
+let ok = fruits.every((value) => { 
+    return value.length > 3 // retorna true se todos os itens do array satisfazem a condicao
+})
+
+if(ok){
+    console.log('Todos sao maiores que 3')
+} else {
+    console.log('Nao sao todos que sao maiores que 3')
+}
+
+let vasco = fruits.some((value) => { 
+    return value.length > 20 // retorna true se algum dos itens do array satisfaz a condicao
+})
+
+if(vasco){
+    console.log('Algum dos itens sao maiores que 20')
+} else {
+    console.log('Nenhum item e maior que 20')
+}
+
+if (fruits.includes('Uva')) { // verifica se contem o item especificado no array
+    console.log('Tem uva')
+} else {
+    console.log('Nao tem uva')
+}
