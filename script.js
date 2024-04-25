@@ -1,21 +1,26 @@
-let fruits = ['Maca', 'Uva', 'Banana']
-for (let i in fruits) {
-    console.log(fruits[i])
-}
-
-console.log('===== Outro metodo =====')
-for (let i = 0; i < fruits.length; i++) {
-    console.log(fruits[i])
-
-}
-console.log('===== Outro metodo =====')
-for (fruit of fruits) {
-    console.log(fruit)
-}
+let fruits = ['Maca', 'Uva', 'Laranja', 'Banana']
 
 
-let i = 1
-while (i <= 100) {
-    console.log(i)
-    i++
-}
+fruits.push('Kiwi') // adiciona no final da fila
+console.log(fruits)
+fruits.pop() // remove o ultimo do array
+console.log(fruits)
+fruits.shift() // remoce o primeiro item do array
+console.log(fruits)
+
+console.log(fruits.length)
+
+let test = fruits.join('; ') // agrupa os itens do array em uma string
+console.log(test)
+
+fruits[1] = 'Pera' // define o valor de um item do array especificado pelo index
+console.log(fruits)
+
+
+fruits[fruits.length - 1] = 'Limao' // define o valor de um item do array especificado pelo index
+console.log(fruits)
+
+fruits.pop() // remove o ultimo item
+fruits.push('Limao') // adiciona no final do array
+console.log(fruits)
+
