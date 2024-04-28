@@ -1,25 +1,19 @@
 function clicou() {
     const teste = document.querySelector('#teste')
     const ul = teste.querySelector('ul')
+    // const newButton = document.createElement('button')
+    // newButton.innerHTML = 'Botao'
+    // ul.after(newButton)
+    // ul.after("Texto adicionado com AFTER")
+    // ul.before("Texto adicionado com BEFORE")
 
-    // adicionado assim, usando o innerHTML gasta mais processamento pois pega o que ja existe, adiciona o que voce quer e altera o conjunto
-    ul.children[0].innerHTML += "Alterado" 
+    let newUl = document.createElement('ul') // crio o elemento na memoria
+    ul.after(newUl) // elemento criado na tela
 
-    // usando o append, ele apenas adiciona, nao altera o conteudo original
-    ul.children[1].innerHTML += "Alterado" 
-
-    // modo errado de adicionar um novo elemento. O elemento nao e criado, apenas inserido o texto
-    ul.append("<li>Item adicionado</li>")
-
-    // jeito mais longo, porem mais efeciente de adicionar um novo item
-    let newLi = document.createElement('li')
-    newLi.innerHTML = 'Item adicionado'
-    ul.appendChild(newLi)
-
-    // jeito mais curto, porem gasta mais processamento e memoria
-    ul.innerHTML += '<li>Item adicionado</li>'
-
-    // funcionamento parecido com o append, porem adiciona no inicio
-    ul.prepend(newLi)
-
+    // crio e adiciono novos elementos ao elemento newUl
+    for(let i = 0; i < 5; i++) {
+        let newLi = document.createElement('li')
+        newLi.innerText = 'Item adicionado ' + (i + 1)
+        newUl.append(newLi)
+    }
 }
