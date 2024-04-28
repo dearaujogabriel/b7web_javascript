@@ -1,18 +1,9 @@
 function clicou() {
-    const input = document.querySelector('input')
-    const botao = document.querySelector('.botao')
+    // manipular css inLine nos elementos
 
-    if (input.hasAttribute('placeholder')) { // hasAttribute verifica se o elemento tem atributo
-        console.log('Tem placeholder sim!')
-    } else {
-        console.log('Nao tem placeholder')
-    }
+    let li = document.querySelector('li')
 
-    if (input.getAttribute('type') === 'text') { // getAttribute pega o valor do atributo
-        input.setAttribute('type', 'password') // setAttribute altera o valor do atributo
-        botao.innerText = 'Mostrar senha'
-    } else {
-        input.setAttribute('type', 'text')
-        botao.innerText = 'Ocultar senha'
-    }
+    li.style.backgroundColor = '#f00'
+    li.style.fontSize = '25px'
+    li.style.color = '#FFF'
 }
