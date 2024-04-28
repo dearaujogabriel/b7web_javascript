@@ -1,25 +1,25 @@
-/*
-
-DOM = Document Object Model
-Cada elemento presente no documento de HMTL e um elemento do DOM
-DOM basicamente eh uma organizacao de como a pagina vai ser exibida
-
-
-*/
-
 function clicou() {
     const teste = document.querySelector('#teste')
-    console.log(teste.children[0].children) // usado pra saber o que tem na tag
-    const ul = teste.querySelector('ul') // usado pra manipular
+    const ul = teste.querySelector('ul')
 
-    console.log(ul.innerHTML) // innerHTML me retorna o que tem dentro da tag e tambem posso usar para manipular o conteudo
-    ul.innerHTML = "<li>Item alterado</li>" // alterando o conteudo da tag
-    ul.innerHTML += "<li>Item adicionado</li>" // adicionando um novo li na tag ul
+    // adicionado assim, usando o innerHTML gasta mais processamento pois pega o que ja existe, adiciona o que voce quer e altera o conjunto
+    ul.children[0].innerHTML += "Alterado" 
 
-    ul.children[0].innerHTML = "Item <strong>alterado</strong>" // innerHTML permite a insercao de codigos html
-    ul.children[1].innerText = "Item <strong>alterado</strong>" // innerText permite a insercao de textos, caso seja inserido um cod HTML, sera tratado como texto
+    // usando o append, ele apenas adiciona, nao altera o conteudo original
+    ul.children[1].innerHTML += "Alterado" 
 
-    console.log(ul.outerHTML) // retorna o conteudo da tag selecionada e dos filhos, inner retorna apenas o conteudo dos filhos
+    // modo errado de adicionar um novo elemento. O elemento nao e criado, apenas inserido o texto
+    ul.append("<li>Item adicionado</li>")
 
-    ul.outerHTML = "Item <strong>alterado</strong>"
+    // jeito mais longo, porem mais efeciente de adicionar um novo item
+    let newLi = document.createElement('li')
+    newLi.innerHTML = 'Item adicionado'
+    ul.appendChild(newLi)
+
+    // jeito mais curto, porem gasta mais processamento e memoria
+    ul.innerHTML += '<li>Item adicionado</li>'
+
+    // funcionamento parecido com o append, porem adiciona no inicio
+    ul.prepend(newLi)
+
 }
