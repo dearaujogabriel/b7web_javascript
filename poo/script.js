@@ -1,43 +1,33 @@
 class Person {
-    // Propriedades que existem na classe mas nao foram instanciadas no construtor
-    _age = 0
-
-    constructor(firstName, lastName) {
-        //propriedade   parametro
-        this.firstName = firstName
-        this.lastName = lastName
-    }
-
-    get age() {
-        return this._age
-    }
     
-    set age(x) {
-        if(typeof x == "number") {
-            this._age = x
-        } else {
-            console.log("Informe um número para a idade")
-        }
-        
+    age = 0
+
+    constructor(firstName) {
+        this.firstName = firstName
     }
 
-    get fullname() {
-        return `${this.firstName} ${this.lastName}`
+    sayHi() {
+        console.log(`${this.firstName} diz 'Oi'`)
     }
 
 }
 
-let p1 = new Person("Gabriel", "Araujo")
-let p2 = new Person("Maria", "Silva")
-let p3 = new Person("Ana", "Azevedo")
-p1.height = 180
-p2.height = 156
-p3.height = 160
+class Student extends Person {
 
-p1.age = 26
-p2.age = 22
-p3.age = 24
+    constructor(name, id) {
+        super(name)
+        this.id = id
+    }
 
-console.log(`${p1.fullname} tem ${p1.age} anos`)
-console.log(`${p2.fullname} tem ${p2.age} anos`)
-console.log(`${p3.fullname} tem ${p3.age} anos`)
+    sayHello() {
+        super.sayHi()
+    }
+
+}
+
+let p1 = new Student('Gabriel', 1)
+p1.age = 20
+
+p1.sayHello()
+
+console.log(`${p1.firstName} tem ${p1.age} e matricula ${p1.id}`)
