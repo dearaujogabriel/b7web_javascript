@@ -8,6 +8,13 @@ class Person {
     }
 }
 
-let p1 = new Person("Gabriel")
+// funcao factory, uma funcao que cria pessoas, uma fabrica de pessoas
+function createPerson(name, age) {
+    let p = new Person(name)
+    p.age = age
+    return p
+}
 
-console.log(`Me chamo ${p1.name} e tenho ${Person.hands} maos`)
+let p1 = createPerson("Gabriel", 26)
+
+console.log(`${p1.name} tem ${p1.age} anos`)
