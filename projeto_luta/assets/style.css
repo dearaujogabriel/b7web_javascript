@@ -1,5 +1,8 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
 .fightarea{
-    display:  flex;
+    display: flex;
     gap: 20px;
 }
 
@@ -23,4 +26,20 @@
     border: 1px dotted #999;
     height: 200px;
     overflow: scroll;
+}
+
+.attackbutton {
+    border-radius: 20px;
+    border: none;
+    background-color: orange;
+    font-weight: bold;
+    font-size: 15px;
+    height: 25px;
+    width: 75px;
+    color: red;
+}
+strong {
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
 }
