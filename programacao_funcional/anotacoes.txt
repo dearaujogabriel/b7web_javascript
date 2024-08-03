@@ -1,0 +1,5 @@
+O que é Factory 
+Cria uma funçao que funciona como uma fabrica do pessoas, produtos, etc
+
+Como funciona a instancia/construtor e o this?
+*funcoes anonimas(arrow functions) sao independentes, portanto se sao instanciadas dentro de outra funcao, elas nao acessam as informacoes da funcao pai
